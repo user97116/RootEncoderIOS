@@ -21,10 +21,10 @@ public class SizeCalculator {
                 return .up
             case .landscapeRight:
                 return .down
-            case .portrait:
-                return .right
-            case .portraitUpsideDown:
-                return .left
+            // case .portrait:
+            //     return .right
+            // case .portraitUpsideDown:
+            //     return .left
             default:
                 return .up
             }
@@ -34,10 +34,10 @@ public class SizeCalculator {
                 return .down
             case .landscapeRight:
                 return .up
-            case .portrait:
-                return .left
-            case .portraitUpsideDown:
-                return .right
+            // case .portrait:
+            //     return .left
+            // case .portraitUpsideDown:
+            //     return .right
             default:
                 return .up
             }
@@ -47,10 +47,10 @@ public class SizeCalculator {
                 return .left
             case .landscapeRight:
                 return .right
-            case .portrait:
-                return .up
-            case .portraitUpsideDown:
-                return .down
+            // case .portrait:
+            //     return .up
+            // case .portraitUpsideDown:
+            //     return .down
             default:
                 return .up
             }
@@ -60,10 +60,10 @@ public class SizeCalculator {
                 return .right
             case .landscapeRight:
                 return .left
-            case .portrait:
-                return .down
-            case .portraitUpsideDown:
-                return .up
+            // case .portrait:
+            //     return .down
+            // case .portraitUpsideDown:
+            //     return .up
             default:
                 return .up
             }
