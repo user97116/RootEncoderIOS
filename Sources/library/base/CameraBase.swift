@@ -183,6 +183,17 @@ public class CameraBase {
     public func getCameraManager() -> CameraManager {
         cameraManager
     }
+    public func setExposure(value: Int) {
+        cameraManager.device?.exposureMode = .custom
+        // Set the desired exposure value
+        let duration = CMTimeMakeWithSeconds(Double(value), preferredTimescale: 1000)
+        let iso = cameraManager.device!.activeFormat.minISO // Or a value based on your app logic
+        cameraManager.device!.setExposureModeCustom(duration: duration, iso: iso) { time in
+            print("Exposure adjustment complete.")
+        }
+        // Unlock the device after configuration
+        cameraManager.device!.unlockForConfiguration()
+    }
     
     public func setVideoBitrateOnFly(bitrate: Int) {
         videoEncoder.setVideoBitrateOnFly(bitrate: bitrate)
